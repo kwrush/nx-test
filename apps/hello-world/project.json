@@ -1,0 +1,73 @@
+{
+  "root": "apps/hello-world",
+  "sourceRoot": "apps/hello-world/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/hello-world",
+        "index": "apps/hello-world/src/index.html",
+        "baseHref": "/",
+        "main": "apps/hello-world/src/main.tsx",
+        "polyfills": "apps/hello-world/src/polyfills.ts",
+        "tsConfig": "apps/hello-world/tsconfig.app.json",
+        "assets": [
+          "apps/hello-world/src/favicon.ico",
+          "apps/hello-world/src/assets"
+        ],
+        "styles": [],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/hello-world/src/environments/environment.ts",
+              "with": "apps/hello-world/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "hello-world:build",
+        "hmr": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "hello-world:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/hello-world/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/hello-world"],
+      "options": {
+        "jestConfig": "apps/hello-world/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

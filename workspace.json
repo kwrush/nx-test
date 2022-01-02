@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "hello-world": "apps/hello-world",
+    "hello-world-e2e": "apps/hello-world-e2e"
+  }
+}
