@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@nx-test/my-button": ["libs/my-button/src/index.ts"],
-      "component-lib-test": ["libs/component-lib-test/src/index.ts"]
+      "component-lib-test": ["libs/component-lib-test/src/index.ts"],
+      "components-lib": ["libs/components-lib/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

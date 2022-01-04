@@ -1,9 +1,9 @@
 module.exports = {
-  displayName: 'component-lib-test',
+  displayName: 'components-lib',
   preset: '../../jest.preset.js',
   transform: {
     '^.+\\.[tj]sx?$': 'babel-jest',
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/libs/component-lib-test',
+  coverageDirectory: '../../coverage/libs/components-lib',
 };

@@ -1,7 +1,7 @@
 {
   "version": 2,
   "projects": {
-    "component-lib-test": "libs/component-lib-test",
+    "components-lib": "libs/components-lib",
     "hello-world": "apps/hello-world",
     "hello-world-e2e": "apps/hello-world-e2e"
   },
