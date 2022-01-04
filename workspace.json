@@ -1,7 +1,17 @@
 {
   "version": 2,
   "projects": {
+    "component-lib-test": "libs/component-lib-test",
     "hello-world": "apps/hello-world",
     "hello-world-e2e": "apps/hello-world-e2e"
+  },
+  "target": {
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "baseBranch": "master",
+        "versionTagPrefix": "${target}@"
+      }
+    }
   }
 }
