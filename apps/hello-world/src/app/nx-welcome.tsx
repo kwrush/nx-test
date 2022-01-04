@@ -1,3 +1,5 @@
+import { MyButton } from '@nx-test/my-button';
+
 /*
  * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  This is a starter component and can be deleted.
@@ -441,6 +443,9 @@ export function NxWelcome({ title }: { title: string }) {
                 <span>You&apos;re up and running</span>
               </h2>
               <a href="#commands"> What&apos;s next? </a>
+              <MyButton onClick={() => console.log('MyButton is clicked')}>
+                A custom button from ~/libs/my-button
+              </MyButton>
             </div>
             <div className="logo-container">
               <svg

@@ -14,7 +14,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@nx-test/my-button": ["libs/my-button/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

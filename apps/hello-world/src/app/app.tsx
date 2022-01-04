@@ -1,3 +1,4 @@
+import { MyButton } from '@nx-test/my-button';
 import styled from 'styled-components';
 import NxWelcome from './nx-welcome';
 
